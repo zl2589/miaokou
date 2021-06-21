@@ -1,0 +1,267 @@
+body {
+    background: #F6F7A7;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box:hover .ear, .ear:hover{
+    transform: rotateZ(0);
+    transition: transform .6s;
+}
+.box:hover .eye-bottom {
+    margin-top: 30px;
+    border-radius: 50%;
+}
+.box:hover .eye-core {
+    width: 50px;
+    margin-left: 25px;
+    transition: width 1s, margin-left 1s;
+}
+.box:hover .eye-red {
+    opacity: .8;
+    transition: opacity 0.5s ease-in 0.2s;
+}
+
+.box:hover .mouth {
+    width: 40px;
+    border-radius: 50%;
+}
+.box:hover .mouth-wrap {
+    margin-left: -44px;
+}
+
+
+
+.container {
+    position: relative;
+    top:100px;
+}
+.box {
+    margin: 0 auto;
+    width: 400px;
+}
+
+/* 脸 */
+.face {
+    width: 400px;
+    height: 340px;
+    border-radius: 50% 50% 35% 35%;
+    border: 2px solid #000;
+    z-index: 10;
+    background: #f3f3f3;
+    overflow: hidden;
+    position: relative;
+    margin-top: -1px;
+}
+/* 耳朵 */
+.ear-wrap {
+    position: relative;
+    z-index: -1;
+}
+.ear {
+    height: 200px;
+    width: 160px;
+    background: #f3f3f3;
+    position: absolute;
+    border: 2px solid #2e2e2e;
+    top: -10px;
+    transition: transform 1s, left 1s;
+}
+.ear.left {
+    left: 0px;
+    border-radius: 4% 80% 0 50%;
+    transform: rotateZ(-15deg);
+    
+}
+.ear.right {
+    left: 240px;
+    border-radius: 80% 4% 50% 0;
+    transform: rotateZ(15deg);
+}
+
+
+
+/* 头发 */
+.hair {
+    position: absolute;
+    height: 160px;
+    width: 180px;
+    left: 110px;
+    background: #8D8D8D;
+    border-radius: 0 0 50% 50%;
+    overflow: hidden;
+}
+
+.hair div:first-child {
+    height: 160px;
+    width: 90px;
+    background: #F0AC6B;
+}
+
+
+
+/* 眼睛 */
+.eye-wrap {
+    position: absolute;
+    height: 60px;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    top: 190px;
+    overflow: hidden;
+}
+.eye {
+    position: absolute;
+}
+.eye.left {
+
+}
+.eye.right {
+    left: 196px;
+}
+.eye-circle {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #2e2e2e;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+}
+.eye-core {
+    height: 50px;
+    width: 30px;
+    background-color: #2e2e2e;
+    transition: all 1s;
+    margin-left: 35px;
+    z-index: -10;
+}
+.eye-bottom {
+    height: 100px;
+    width: 180px;
+    border-top: 2px solid #2e2e2e;
+    border-radius: 50%;
+    margin-left: -38px;
+    margin-top: 50px;
+    transition: margin-top 1s;
+    z-index: 20;
+    background: #F6F7F2;
+}
+.eye-red {
+    position: absolute;
+    height: 28px;
+    width: 70px;
+    background-color: pink;
+    top: 34px;
+    left: 18px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+
+
+/* 鼻子 */
+.nose {
+    width: 30px;
+    height: 10px;
+    border-bottom: 8px solid #000;
+    border-radius: 0% 0% 50% 50%;
+    top: 250px;
+    left: 50%;
+    margin-left: -15px;
+    position: absolute;
+}
+
+
+/* 嘴巴 */
+.mouth-wrap {
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -54px;
+    top: 268px;
+    display: flex;
+    overflow: hidden;
+}
+.mouth {
+    width: 50px;
+    height: 40px;
+    border-bottom: 4px solid #2e2e2e;
+    left: -100px;
+    margin-top: -20px;
+    transition: border-radius 1s;
+}
+.mouth.left {
+    border-right: 4px solid #2e2e2e;
+    border-radius: 0% 40% 50% 20%;
+}
+.mouth.right {
+    border-left: 4px solid #2e2e2e;
+    border-radius: 40% 0% 20% 50%;
+}
+
+
+/* 胡子 */
+.mustache-wrap {
+    height: 80px;
+    width: 380px;
+    position: absolute;
+    top: 180px;
+    z-index: 20;
+    left: 50%;
+    margin-left: -190px;
+}
+.mustache div:first-child {
+    width: 30px;
+    height: 10px;
+    border-top: 6px #E53941 solid;
+    border-radius: 30% 80% 20% 50%;
+    transform: rotate(25deg);
+    margin-left: 15px;
+}
+.mustache div:nth-child(2) {
+    width: 20px;
+    height: 6px;
+    background-color: #E53941;
+    border-radius: 50%;
+    transform: rotate(25deg);
+    margin-left: 18px;
+    margin-top: 2px;
+}
+.mustache div:nth-child(3) {
+    width: 32px;
+    height: 10px;
+    border-bottom: 4px #E53941 solid;
+    border-radius: 30% 0% 90% 30%;
+    transform: rotate(25deg);
+    margin-left: 10px;
+    margin-top: 4px;
+}
+.mustache div:nth-child(4) {
+    width: 26px;
+    height: 20px;
+    border-bottom: 4px #E53941 solid;
+    border-radius: 30% 0% 90% 30%;
+    transform: rotate(30deg);
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.mustache div:last-child {
+    width: 22px;
+    height: 10px;
+    border-bottom: 3px #E53941 solid;
+    border-radius: 0% 0% 50% 50%;
+    transform: rotate(-15deg);
+    margin-left: 45px;
+    margin-top: -8px;
+}
+
+.mustache.left {
+    float: left;
+}
+.mustache.right {
+    float: right;
+    transform: rotateY(180deg);
+}
